@@ -7,12 +7,9 @@ const meta: Meta<typeof ShipCard> = {
   component: ShipCard,
   tags: ['autodocs'],
   argTypes: {
-    shipName: {
+    shipData: {
       control: {type: "text"},
-    },
-    shipModel: {
-      control: {type: "text"},
-    },
+    }
   }
 };
 
@@ -23,7 +20,9 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     onClick: fn(),
-    shipName: "Ship Name",
-    shipModel: "Ship Model"
+    shipData: {
+      name: "Ship Name",
+      model: "Ship Model"
+    }
   },
 };
