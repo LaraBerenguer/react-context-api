@@ -6,7 +6,7 @@
 const Header =() => {
     return (
         <>
-            <div className="header dark:bg-black flex flex-row justify-between dark:text-white">
+            <div className="header dark:bg-black flex flex-row justify-between dark:text-white pb-4">
                 <div className="header-socials content-center m-4">
                     {/*<Socials />*/}
                     <p>Socials</p>
