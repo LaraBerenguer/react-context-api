@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        darkBg: '#000',
+        darkBg: '#000000',
       },
     },
   },

@@ -1,6 +1,6 @@
 const HomePage = () => {
     return (
-        <p>A long time ago in a Galaxy far away... Welcome!</p>
+        <p className="dark: text-white">A long time ago in a Galaxy far away... Welcome!</p>
     )
 };
 

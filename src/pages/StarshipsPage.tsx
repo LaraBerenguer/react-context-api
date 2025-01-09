@@ -2,15 +2,17 @@ import ShipCard from '../components/ShipCard';
 import { useShips } from '../context/StarshipsContext';
 
 const StarshipsPage = () => {
-    const {shipsData, loading, error} = useShips();
+    const { shipsData, loading, error } = useShips();
 
-    if (loading) return <div>Loading...</div> 
-    if (error) return <div>{error}</div> 
+    if (loading) return <div>Loading...</div>
+    if (error) return <div>{error}</div>
 
     return (
-        <>
-        {shipsData.map((ship => <ShipCard key={ship.name} shipData={ship} />))}
-        </>
+        <div className='starships-page-container flex justify-center'>
+            <div className='starships-page-list flex flex-col gap-3'>
+               {shipsData.map((ship => <ShipCard key={ship.name} shipData={ship} />))} 
+            </div>            
+        </div>
     );
 };
 
