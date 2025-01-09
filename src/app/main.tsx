@@ -3,9 +3,12 @@ import { createRoot } from 'react-dom/client'
 import '../styles/input.css'
 //import App from './App.tsx'
 import AppRoutes from '../routes/routes.tsx'
+import { ShipsProvider } from "../context/StarshipsContext";
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <AppRoutes />
-  </StrictMode>,
+    <ShipsProvider>
+      <AppRoutes />
+    </ShipsProvider>
+  </StrictMode>
 );
