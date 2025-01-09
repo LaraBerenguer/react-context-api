@@ -3,6 +3,8 @@
     login: () => void;
 }*/
 
+import { Button } from "../Button/Button";
+
 const Header =() => {
     return (
         <>
@@ -18,7 +20,7 @@ const Header =() => {
                 </div>
                 <div className="header-login content-center m-4">
                     <div className="header-login-container">
-                        <button className="login-button" /*onClick={login}*/>Login</button>
+                        <Button label={"Login"} primary={false}/>
                     </div>
                 </div>
             </div>

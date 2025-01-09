@@ -8,7 +8,11 @@ export default {
     "./.storybook/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        darkBg: '#000',
+      },
+    },
   },
   plugins: [],
 }

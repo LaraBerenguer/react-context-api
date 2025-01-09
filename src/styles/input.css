@@ -7,3 +7,7 @@
 body {
     font-family: "Space Mono", serif;
 }
+
+.dark body {
+    background-color: theme('colors.darkBg');
+}
