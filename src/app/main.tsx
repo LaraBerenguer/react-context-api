@@ -4,7 +4,7 @@ import '../styles/input.css'
 import '../styles/tailwind.css'
 //import App from './App.tsx'
 import AppRoutes from '../routes/routes.tsx'
-import { ShipsProvider } from "../context/StarshipsContext";
+import { ShipsProvider } from "../context/ShipCardContext.tsx";
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

@@ -1,5 +1,5 @@
 import ShipCard from '../components/ShipCard';
-import { useShips } from '../context/StarshipsContext';
+import { useShips } from '../context/ShipCardContext';
 
 const StarshipsPage = () => {
     const { shipsData, loading, error } = useShips();
