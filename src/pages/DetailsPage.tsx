@@ -1,6 +1,12 @@
 import Starship from "../components/Starship";
+import { useStarship } from "../context/StarshipContext";
 
 const DetailsPage = () => {
+
+    const { starshipsData, loading, error } = useStarship();
+
+    if (loading) return <div>Loading...</div>
+    if (error) return <div>{error}</div>
 
     return (
         <>
@@ -8,7 +14,7 @@ const DetailsPage = () => {
             <div className="details-page-container">
                 <div className="starship-container">
                     <div className="starship-container-component">
-                        {/*<Starship />*/}
+                        <Starship />
                     </div>
                 </div>
                 <div className="pilots-container">

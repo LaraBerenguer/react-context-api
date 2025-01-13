@@ -10,7 +10,7 @@ const StarshipsPage = () => {
     return (
         <div className='starships-page-container flex justify-center'>
             <div className='starships-page-list flex flex-col gap-3'>
-               {shipsData.map((ship => <ShipCard key={ship.name} shipData={ship} />))} 
+               {shipsData.map((ship => <ShipCard key={ship.id} shipData={ship} />))} 
             </div>            
         </div>
     );

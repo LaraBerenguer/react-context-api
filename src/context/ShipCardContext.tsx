@@ -1,9 +1,9 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { fetchShipCard } from '../api/endpoints/shipsApi';
-import { Ship } from "../api/api-interfaces/Ship-interface";
+import { fetchShipCard } from '../api/endpoints/api-shipCard';
+import { IShipCard } from "../api/api-interfaces/Ship-interface";
 
 interface ShipsContextType {
-    shipsData: Ship[];
+    shipsData: IShipCard[];
     loading: boolean;
     error: string | null;
 }
@@ -11,14 +11,14 @@ interface ShipsContextType {
 const ShipsContext = createContext<ShipsContextType | undefined>(undefined);
 
 export const ShipsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [shipsData, setShipsData] = useState<Ship[]>([]);
+    const [shipsData, setShipsData] = useState<IShipCard[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const data: Ship[] = await fetchShipCard();
+                const data: IShipCard[] = await fetchShipCard();
                 setShipsData(data);
             } catch (err) {
                 setError("Error fetching Starships data");

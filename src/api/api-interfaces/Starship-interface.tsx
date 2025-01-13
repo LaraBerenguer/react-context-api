@@ -1,4 +1,5 @@
 export interface IStarship {
+    id: number,
     name: string,
     model: string,
     manufacturer: string,
@@ -7,4 +8,5 @@ export interface IStarship {
     max_atmosphering_speed: string,
     crew: string,
     passengers: string
+    url: string
 };

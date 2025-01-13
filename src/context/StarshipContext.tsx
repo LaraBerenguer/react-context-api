@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { IStarship } from "../api/api-interfaces/Starship-interface";
-import { fetchStarship } from "../api/endpoints/starshipApi";
+import { fetchStarship } from "../api/endpoints/api-starship";
 
 interface StarshipContextType {
     starshipsData: IStarship[];

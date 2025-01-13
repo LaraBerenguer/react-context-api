@@ -2,19 +2,16 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Starships from '../pages/StarshipsPage';
 import Layout from "../layout/layout";
 import HomePage from "../pages/HomePage";
-//import Pilots from pages
-//import Movies from pages
+import DetailsPage from "../pages/DetailsPage";
 
-const AppRoutes = () => {
+const AppRoutes = (/*name*/) => {
     return (
         <Router>
             <Routes>
                 <Route element={<Layout />}>
                     <Route path='/' element={<HomePage />} />
                     <Route path='/starships' element={<Starships />} />
-                    <Route path='/'  element={<Starships />} />
-                    <Route path='/pilots' /*element={<Pilots />}*/ />
-                    <Route path='/movies' /*element={<Movies />}*/ />
+                    <Route path='/starships/:name' element={<DetailsPage />} />
                 </Route>
             </Routes>
         </Router>

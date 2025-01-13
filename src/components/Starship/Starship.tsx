@@ -6,7 +6,8 @@ interface StarshipProps {
     onClick?: () => void;   
 };
 
-const Starship = ({shipData}) => {
+
+const Starship: React.FC<StarshipProps> = ({shipData}) => {
     return (
         <div className="starship-main-container dark:bg-black dark:text-white p-4 flex flex-col">
             <div className="starship-title-div my-4 py-2 px-4 border-t border-b border-gray-600">
@@ -21,29 +22,29 @@ const Starship = ({shipData}) => {
                 <div className="starship-card-details-div dark:bg-gray-600 basis-1/2 p-4">
                     <div className="card-details">
                         <div className="card-details-title mb-4 font-bold">
-                            <p>Name{/*Starship Name*/}</p>
+                            <p>Name{shipData.name}</p>
                         </div>
                         <div className="card-details-container my-4 flex flex-row text-xs space-x-10">
                             <div className="card-details-left space-y-4">
                                 <div className="spaceship-model">
-                                    <p>Model{/*Starship Model*/}</p>
+                                    <p>Model{shipData.model}</p>
                                 </div>
                                 <div className="spaceship-credits">
-                                    <p>Credits{/*Starship Credits*/}</p>
+                                    <p>Credits{shipData.cost_in_credits}</p>
                                 </div>
                                 <div className="spaceship-speed">
-                                    <p>Speed{/*Starship Speed*/}</p>
+                                    <p>Speed{shipData.max_atmosphering_speed}</p>
                                 </div>
                             </div>
                             <div className="card-details-rigth space-y-4">
                                 <div className="spaceship-manufacturer">
-                                    <p>Manufacture{/*Starship Manufacturer*/}</p>
+                                    <p>Manufacture{shipData.manufacturer}</p>
                                 </div>
                                 <div className="spaceship-size">
-                                    <p>Size{/*Starship Size*/}</p>
+                                    <p>Size{shipData.length}</p>
                                 </div>
                                 <div className="spaceship-crew">
-                                    <p>Crew{/*Starship Crew*/}</p>
+                                    <p>Crew{shipData.passengers}</p>
                                 </div>
                             </div>
                         </div>

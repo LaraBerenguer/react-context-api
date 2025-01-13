@@ -1,20 +1,13 @@
-import apiShips from '../api-index';
+import apiStarWars from '../api-index';
 import { IStarship } from '../api-interfaces/Starship-interface';
 
 export const fetchStarship = async () => {
-    const data = await apiShips();
+    const data = await apiStarWars();
 
-    const starshipData: IStarship[] = data.map((ship: {
-        name: string,
-        model: string,
-        manufacturer: string,
-        cost_in_credits: string,
-        length: string,
-        max_atmosphering_speed: string,
-        crew: string,
-        passengers: string
-    }) =>
+    const starshipData: IStarship[] = data.map((ship: IStarship) =>
     ({
+        id: Number((ship.url).slice(37,-1)),
+        //id: Number(new URL(ship.url).pathname.split('/').filter(Boolean).pop()),
         name: ship.name,
         model: ship.model,
         manufacturer: ship.manufacturer,
