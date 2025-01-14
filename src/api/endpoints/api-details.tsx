@@ -3,8 +3,14 @@ import { IDetails } from '../api-interfaces/Details-interface';
 
 export const fetchDetails = async (id: number) => {
     const data: IDetails = await apiById(id);
-    console.log("dataById: ", data);
 
-    return data;
+    const DetailsData = {
+        ...data,
+        id: (data.url.split('/')[5])
+    };
+
+    console.log("dataById: ", DetailsData);
+
+    return DetailsData;
 };
 

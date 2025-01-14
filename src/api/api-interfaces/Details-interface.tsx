@@ -1,5 +1,5 @@
 export interface IDetails {
-    id: number,
+    id: string,
     name: string,
     model: string,
     manufacturer: string,

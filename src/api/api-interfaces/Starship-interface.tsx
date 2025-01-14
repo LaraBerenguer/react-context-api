@@ -1,5 +1,5 @@
 export interface IStarship {
-    id: number,
+    id: string,
     name: string,
     model: string,
     manufacturer: string,

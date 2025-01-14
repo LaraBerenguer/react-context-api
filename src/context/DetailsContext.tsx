@@ -11,6 +11,7 @@ interface DetailsContextType {
 const DetailsContext = createContext<DetailsContextType | undefined>(undefined);
 
 export const DetailsProvider: React.FC<{ id: number, children: React.ReactNode }> = ({ id, children }) => {
+    
     const [detailsData, setdetailsData] = useState<IDetails>();
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
