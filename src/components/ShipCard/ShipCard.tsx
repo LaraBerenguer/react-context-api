@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 interface ShipCardProps {
     shipData: {
@@ -10,8 +11,14 @@ interface ShipCardProps {
 }
 
 const ShipCard: React.FC<ShipCardProps> = ({shipData}) => {
+
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate(`/starships/${shipData.id}`)
+    };
+
     return (
-        <button {onClick={}}>
+        <button onClick={handleClick}>
             <div className="card dark:bg-gray-900 rounded-md p-4 flex flex-col max-w-lg">
                 <div className="card-text dark:text-white">
                     <div className="card-text-name font-semibold">

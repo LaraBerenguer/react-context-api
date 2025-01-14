@@ -1,8 +1,9 @@
 import React from "react";
-import { IStarship } from "../../api/api-interfaces/Starship-interface";
+//import { IStarship } from "../../api/api-interfaces/Starship-interface";
+import { IDetails } from "../../api/api-interfaces/Details-interface";
 
 interface StarshipProps {
-    shipData: IStarship
+    shipData: IDetails
     onClick?: () => void;   
 };
 

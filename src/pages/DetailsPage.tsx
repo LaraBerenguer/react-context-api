@@ -1,20 +1,24 @@
+import { useParams } from "react-router-dom";
 import Starship from "../components/Starship";
-import { useStarship } from "../context/StarshipContext";
+import { DetailsProvider, useDetails } from "../context/DetailsContext";
 
 const DetailsPage = () => {
 
-    const { starshipsData, loading, error } = useStarship();
+    const {id} = useParams<{id: string}>();
+    
+    const { detailsData, loading, error } = useDetails();
 
     if (loading) return <div>Loading...</div>
     if (error) return <div>{error}</div>
+    if (!detailsData) return <div>No details available</div>;
 
     return (
-        <>
+        <DetailsProvider id={Number(id)}>
             <p className="dark: text-white">Details</p>
             <div className="details-page-container">
                 <div className="starship-container">
                     <div className="starship-container-component">
-                        <Starship />
+                        <Starship shipData={detailsData} />
                     </div>
                 </div>
                 <div className="pilots-container">
@@ -28,7 +32,7 @@ const DetailsPage = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </DetailsProvider>
     )
 };
 
