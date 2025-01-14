@@ -9,22 +9,22 @@ interface StarshipProps {
 
 const Starship: React.FC<StarshipProps> = ({data}) => {
     return (
-        <div className="starship-main-container dark:bg-black dark:text-white p-4 flex flex-col">
+        <div className="starship-main-container dark:text-white p-4 flex flex-col">
             <div className="starship-title-div my-4 py-2 px-4 border-t border-b border-gray-600">
                 <div className="starship-title">STARSHIP</div>
             </div>
             <div className="starship-card-div flex flex-row justify-center">
                 <div className="starship-card-img-div basis-1/2">
                     <div className="starship-img">
-                        <img src={`https://starwars-visualguide.com/assets/img/starships/${data.id}.jpg`} alt={`${data.name}`} className="w-full h-auto object-cover"/>
+                        <img src={`https://starwars-visualguide.com/assets/img/starships/${data.id}.jpg`} alt={`${data.name}`} className="w-full h-auto object-cover rounded-md"/>
                     </div>
                 </div>
-                <div className="starship-card-details-div dark:bg-gray-600 basis-1/2 p-4">
+                <div className="starship-card-details-div dark:bg-gray-600 dark:bg-opacity-80 basis-1/2 p-4 rounded-md">
                     <div className="card-details">
-                        <div className="card-details-title mb-4 font-bold">
+                        <div className="card-details-title mb-4 font-extrabold">
                             <p>{(data.name).toUpperCase()}</p>
                         </div>
-                        <div className="card-details-container my-4 flex flex-row text-xs space-x-10">
+                        <div className="card-details-container my-4 flex flex-row text-sm space-x-10">
                             <div className="card-details-left space-y-4">
                                 <div className="spaceship-model">
                                     <p>Model: {data.model}</p>

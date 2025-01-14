@@ -9,9 +9,6 @@ const DetailsContent: React.FC = () => {
     if (loading) return <div>Loading...</div>
     if (error) return <div>{error}</div>
 
-    console.log("details data: ", detailsData);
-    console.log("details ids: ", detailsData.id);
-
     return (
         <>
             <div className="details-page-container">
