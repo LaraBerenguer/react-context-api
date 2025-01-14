@@ -1,14 +1,13 @@
 import React from "react";
-//import { IStarship } from "../../api/api-interfaces/Starship-interface";
 import { IDetails } from "../../api/api-interfaces/Details-interface";
 
 interface StarshipProps {
-    shipData: IDetails
+    data: IDetails
     onClick?: () => void;   
 };
 
 
-const Starship: React.FC<StarshipProps> = ({shipData}) => {
+const Starship: React.FC<StarshipProps> = ({data}) => {
     return (
         <div className="starship-main-container dark:bg-black dark:text-white p-4 flex flex-col">
             <div className="starship-title-div my-4 py-2 px-4 border-t border-b border-gray-600">
@@ -23,29 +22,29 @@ const Starship: React.FC<StarshipProps> = ({shipData}) => {
                 <div className="starship-card-details-div dark:bg-gray-600 basis-1/2 p-4">
                     <div className="card-details">
                         <div className="card-details-title mb-4 font-bold">
-                            <p>Name{shipData.name}</p>
+                            <p>Name{data.name}</p>
                         </div>
                         <div className="card-details-container my-4 flex flex-row text-xs space-x-10">
                             <div className="card-details-left space-y-4">
                                 <div className="spaceship-model">
-                                    <p>Model{shipData.model}</p>
+                                    <p>Model{data.model}</p>
                                 </div>
                                 <div className="spaceship-credits">
-                                    <p>Credits{shipData.cost_in_credits}</p>
+                                    <p>Credits{data.cost_in_credits}</p>
                                 </div>
                                 <div className="spaceship-speed">
-                                    <p>Speed{shipData.max_atmosphering_speed}</p>
+                                    <p>Speed{data.max_atmosphering_speed}</p>
                                 </div>
                             </div>
                             <div className="card-details-rigth space-y-4">
                                 <div className="spaceship-manufacturer">
-                                    <p>Manufacture{shipData.manufacturer}</p>
+                                    <p>Manufacture{data.manufacturer}</p>
                                 </div>
                                 <div className="spaceship-size">
-                                    <p>Size{shipData.length}</p>
+                                    <p>Size{data.length}</p>
                                 </div>
                                 <div className="spaceship-crew">
-                                    <p>Crew{shipData.passengers}</p>
+                                    <p>Crew{data.passengers}</p>
                                 </div>
                             </div>
                         </div>

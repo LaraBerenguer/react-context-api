@@ -6,8 +6,7 @@ export const fetchShipCard = async () => {
     
     const shipCardData: IShipCard[] = data.map((ship: IShipCard) =>
     ({
-        id: Number((ship.url).slice(37,-1)),
-        //id: Number(new URL(ship.url).pathname.split('/').filter(Boolean).pop()),
+        id: ((ship.url).split('/')[5]),
         name: ship.name,
         model: ship.model
     }));

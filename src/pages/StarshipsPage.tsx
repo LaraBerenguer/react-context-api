@@ -3,6 +3,7 @@ import { useShips } from '../context/ShipCardContext';
 
 const StarshipsPage = () => {
     const { shipsData, loading, error } = useShips();
+    console.log("data id:", shipsData.map(ship => ship.id));
 
     if (loading) return <div>Loading...</div>
     if (error) return <div>{error}</div>

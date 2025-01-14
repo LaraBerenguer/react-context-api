@@ -6,8 +6,7 @@ export const fetchStarship = async () => {
 
     const starshipData: IStarship[] = data.map((ship: IStarship) =>
     ({
-        id: Number((ship.url).slice(37,-1)),
-        //id: Number(new URL(ship.url).pathname.split('/').filter(Boolean).pop()),
+        id: ((ship.url).split('/')[5]),
         name: ship.name,
         model: ship.model,
         manufacturer: ship.manufacturer,
