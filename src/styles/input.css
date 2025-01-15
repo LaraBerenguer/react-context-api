@@ -4,17 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
-html,body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: "Space Mono", serif;
     /*background-color: #000;*/
     background-image: url('/bg.webp');
     background-size: cover;
+    background-position: absolute;
     background-repeat: no-repeat;
 }
 
