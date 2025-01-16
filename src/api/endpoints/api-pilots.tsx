@@ -1,7 +1,7 @@
 import apiPilots from '../api-pilots';
 import { IPilots } from '../api-interfaces/Pilots-interface';
 
-export const fetchPilots = async (id: number) => {
+export const fetchPilots = async (id: string) => {
     const data: IPilots = await apiPilots(id);
 
     const PilotsData = {
@@ -9,7 +9,7 @@ export const fetchPilots = async (id: number) => {
         id: (data.url.split('/')[5])
     };
 
-    console.log("dataPilots: ", PilotsData);
+    console.log("fetchPilots data: ", PilotsData);
 
     return PilotsData;
 };

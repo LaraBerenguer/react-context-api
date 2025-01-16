@@ -3,32 +3,36 @@ import { IPilots } from "../api/api-interfaces/Pilots-interface";
 import { fetchPilots } from "../api/endpoints/api-pilots";
 
 interface PilotsContextType {
-    pilotsData: IPilots | undefined;
+    pilotsData: IPilots[];
     pilotsLoading: boolean;
     pilotsError: string | null;
 }
 
 const PilotsContext = createContext<PilotsContextType | undefined>(undefined);
 
-export const PilotsProvider: React.FC<{ id: number, children: React.ReactNode }> = ({ id, children }) => {
-    
-    const [pilotsData, setPilotsData] = useState<IPilots>();
+export const PilotsProvider: React.FC<{ pilotIds: string[], children: React.ReactNode }> = ({ pilotIds, children }) => {
+
+    const [pilotsData, setPilotsData] = useState<IPilots[]>([]);
     const [pilotsLoading, setpilotsLoading] = useState(true);
     const [pilotsError, setpilotsError] = useState<string | null>(null);
 
     useEffect(() => {
+        console.log("Pilot IDs: ", pilotIds);
         const fetchData = async () => {
             try {
-                const data: IPilots = await fetchPilots(id);
+                setpilotsLoading(true);
+                const data = await Promise.all(pilotIds.map((id) => fetchPilots(id)));
+                console.log("PilotsProvider data: ", data); // Add this line
                 setPilotsData(data);
             } catch (err) {
-                setpilotsError("pilotsError fetching Details data");
+                setpilotsError("Error fetching Pilots");
             } finally {
                 setpilotsLoading(false);
             }
         };
+
         fetchData();
-    }, [id]);
+    }, [pilotIds]);
 
     return (
         <PilotsContext.Provider value={{ pilotsData, pilotsLoading, pilotsError }}>

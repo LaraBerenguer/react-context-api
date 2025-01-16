@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import { DetailsProvider } from "../context/DetailsContext";
 import DetailsContent from "../components/Details-Content";
-import { PilotsProvider } from "../context/PilotsContext";
 
 const DetailsPage = () => {
 
@@ -9,10 +8,7 @@ const DetailsPage = () => {
 
     return (
         <DetailsProvider id={Number(id)}>
-            <PilotsProvider id={Number(id)}>
-                <DetailsContent />
-            </PilotsProvider>
-
+            <DetailsContent />
         </DetailsProvider>
     )
 };

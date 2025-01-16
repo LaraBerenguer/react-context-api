@@ -1,4 +1,4 @@
-const apiPilots = async (id: number) => {
+const apiPilots = async (id: string) => {
     const response = await fetch(`https://swapi.py4e.com/api/people/${id}`, { headers: { 'Accept': 'application/json' } });
 
     if (!response.ok) {
@@ -6,7 +6,7 @@ const apiPilots = async (id: number) => {
     }
 
     const data = await response.json();
-    console.log("data: ", data);
+    console.log("apiPilots data: ", data);
     return data;    
 }
 

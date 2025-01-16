@@ -5,6 +5,7 @@ export interface ButtonProps {
   primary?: boolean;
   /** What background color to use */
   backgroundColor?: string;
+  color?: string;
   /** How large should the button be? */
   size?: 'small' | 'medium' | 'large';
   /** Button contents */
@@ -26,7 +27,7 @@ export const Button = ({
     <button
       type="button"
       className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
+      style={{ backgroundColor, color: 'black' }}
       {...props}
     >
       {label}

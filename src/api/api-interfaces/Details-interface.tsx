@@ -13,7 +13,7 @@ export interface IDetails {
     hyperdrive_rating: string,
     MGLT: string,
     starship_class: string,    
-    pilots: [],
-    films: [],
+    pilots: string[],
+    films: string[],
     url: string
 };

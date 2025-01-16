@@ -10,7 +10,11 @@ body {
     background-image: url('/bg.webp');
     background-size: cover;
     background-position: absolute;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;    
+}
+
+html {
+    height: 100%;
 }
 
 .dark body {
