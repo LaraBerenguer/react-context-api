@@ -17,6 +17,10 @@ html {
     height: 100%;
 }
 
+#root {
+    height: 100%;
+}
+
 .dark body {
     background-color: theme('colors.darkBg');
 }

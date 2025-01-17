@@ -12,6 +12,7 @@ export interface ButtonProps {
   label: string;
   /** Optional click handler */
   onClick?: () => void;
+  disabled?: boolean;
 }
 
 /** Primary UI component for user interaction */
@@ -20,14 +21,25 @@ export const Button = ({
   size = 'medium',
   backgroundColor,
   label,
+  disabled = false,
   ...props
 }: ButtonProps) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor, color: 'black' }}
+      className={[
+        'storybook-button',
+        `storybook-button--${size}`,
+        mode,
+        disabled ? 'storybook-button--disabled' : ''
+      ].join(' ')}
+      style={{
+        backgroundColor: disabled ? '#ccc' : backgroundColor,
+        color: disabled ? '#666' : 'black',
+        cursor: disabled ? 'not-allowed' : 'pointer',
+      }}
+      disabled={disabled}
       {...props}
     >
       {label}
