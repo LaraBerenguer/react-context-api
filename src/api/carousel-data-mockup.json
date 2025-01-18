@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "The episodic directors take you behind the scenes of Star Wars: Skeleton Crew.",
+        "buttonText": "Read More",
+        "bgImg": "https://lumiere-a.akamaihd.net/v1/images/skeleton-crew-directed-by-skeleton-crew-mobile_0ecfbe40.jpeg"
+    },
+    {
+        "id": 2,
+        "title": "Dive into the practical and digital effects of Star Wars: Skeleton Crew.",
+        "buttonText": "Read More",
+        "bgImg": "https://lumiere-a.akamaihd.net/v1/images/vfx-interview-skeleton-crew-mobile_672077ba.jpeg"
+    },
+    {
+        "id": 3,
+        "title": "Which Skeleton Crew character would be your BFF?",
+        "buttonText": "Find Out",
+        "bgImg": "https://lumiere-a.akamaihd.net/v1/images/quiz-bff-skeleton-crew-featured_0d6c2ee1.jpeg"
+    }
+]
