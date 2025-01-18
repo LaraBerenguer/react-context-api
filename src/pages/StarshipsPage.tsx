@@ -61,6 +61,7 @@ const StarshipsPage = () => {
                 {nextPageUrl && <Button label={`${loading ? "Loading..." : "Load More"}`} disabled={loading} primary={true} backgroundColor={"#ffe91f"} color={"##000"} onClick={fetchShips} />}
                 {!nextPageUrl && !loading && <p className='dark:text-gray-500 text-xs'>No more ships to load.</p>}
             </div>
+            {error && <div className="error">{error}</div>}
         </div>
     );
 };

@@ -570,12 +570,25 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.mx-6{
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
 .mb-4{
   margin-bottom: 1rem;
 }
 
 .ms-4{
   margin-inline-start: 1rem;
+}
+
+.me-6{
+  margin-inline-end: 1.5rem;
+}
+
+.ms-6{
+  margin-inline-start: 1.5rem;
 }
 
 .flex{

@@ -23,6 +23,7 @@ export const Default: Story = {
     shipData: {
       name: "Ship Name",
       model: "Ship Model",
+      id: 0,
     }
   },
 };

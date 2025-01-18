@@ -5,7 +5,7 @@ import Starship from "../Starship";
 
 const DetailsContent: React.FC = () => {
 
-    const { detailsData, loading, error } = useDetails()
+    const { detailsData, loading, error } = useDetails();
 
     if (!detailsData) return <div>Error: no data</div>
     if (loading) return <div>Loading...</div>
