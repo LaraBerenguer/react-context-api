@@ -18,7 +18,7 @@ const HomePage = () => {
             <div className="homepage-banner dark:text-white text-md p-3 flex justify-center">
                 <div>SKELLETON CREW | NOW STREAMING </div>
             </div>
-            <div className="carousel-container w-full max-w-xxl mx-auto p-4 dark:text-white rounded-lg shadow-lg">
+            <div className="carousel-container w-full max-w-xxl mx-auto p-4 dark:text-white rounded-lg shadow-lg relative">
                 <div className="carousel-slide flex flex-col items-center text-center w-full">
                     <div className="carousel-img relative">
                         <img
@@ -26,9 +26,9 @@ const HomePage = () => {
                             alt="Skelleton Crew"
                             className="w-full h-auto rounded-lg mb-4"
                         />
-                        <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black to-transparent rounded-b-lg"></div>
+                        <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black to-transparent rounded-b-lg"></div>                        
                     </div>
-                    <div className="carousel-items flex flex-col gap-7 max-w-80">
+                    <div className="carousel-items flex flex-col gap-7 max-w-80 md:absolute md:top-1/2 md:left-1/4 md:transform md:-translate-x-1/2 md:-translate-y-1/2">
                         <img
                             src="https://lumiere-a.akamaihd.net/v1/images/star-wars-skeleton-crew-logo-v2-400_17f5dd26.png"
                             alt="Skeleton Crew"
@@ -44,9 +44,9 @@ const HomePage = () => {
                     </div>
                 </div>
                 <button
-                    className="absolute left-2 top-2/3 -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full hover:bg-gray-800 transition"
+                    className="absolute left-3 lg:left-24 top-1/2 -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full hover:bg-gray-800 transition"
                     onClick={handlePrev}>◀</button>
-                <button className="absolute right-2 top-2/3 -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full hover:bg-gray-800 transition"
+                <button className="absolute right-3 lg:right-24 top-1/2 -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full hover:bg-gray-800 transition"
                     onClick={handleNext}>▶</button>
             </div>
         </>

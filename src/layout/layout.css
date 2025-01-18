@@ -8,6 +8,7 @@
     background-image: url('/bg.webp');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .bg-default {
