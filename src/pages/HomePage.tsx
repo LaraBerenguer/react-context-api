@@ -15,10 +15,10 @@ const HomePage = () => {
 
     return (
         <>
-            <div className="homepage-banner bg-black dark:text-white text-md p-3 flex justify-center">
+            <div className="homepage-banner dark:text-white text-md p-3 flex justify-center">
                 <div>SKELLETON CREW | NOW STREAMING </div>
             </div>
-            <div className="carousel-container w-full max-w-xxl mx-auto p-4 dark:bg-black dark:text-white rounded-lg shadow-lg">
+            <div className="carousel-container w-full max-w-xxl mx-auto p-4 dark:text-white rounded-lg shadow-lg">
                 <div className="carousel-slide flex flex-col items-center text-center w-full">
                     <div className="carousel-img relative">
                         <img
@@ -34,7 +34,7 @@ const HomePage = () => {
                             alt="Skeleton Crew"
                             className="h-32 mx-auto"
                         />
-                        <h2 className="text-xl font-semibold mb-4">{carouselData[currentIndex].title}</h2>
+                        <h2 className="text-lg font-semibold mb-4">{carouselData[currentIndex].title}</h2>
                         <Button
                             label={carouselData[currentIndex].buttonText}
                             primary={true}

@@ -5,12 +5,7 @@
 @tailwind utilities;
 
 body {
-    font-family: "Space Mono", serif;
-    /*background-color: #000;*/
-    background-image: url('/bg.webp');
-    background-size: cover;
-    background-position: absolute;
-    background-repeat: no-repeat;    
+    font-family: "Space Mono", serif;       
 }
 
 html {

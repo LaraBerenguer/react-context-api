@@ -4,7 +4,7 @@ import Layout from "../layout/layout";
 import HomePage from "../pages/HomePage";
 import DetailsPage from "../pages/DetailsPage";
 
-const AppRoutes = (/*name*/) => {
+const AppRoutes = () => {
     return (
         <Router>
             <Routes>
