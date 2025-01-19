@@ -15,7 +15,7 @@ const HomePage = () => {
 
     return (
         <>
-            <div className="homepage-banner dark:text-white text-md p-3 flex justify-center">
+            <div className="homepage-banner dark:bg-black dark:text-white text-md p-3 flex justify-center">
                 <div>SKELLETON CREW | NOW STREAMING </div>
             </div>
             <div className="carousel-container w-full max-w-xxl mx-auto p-4 dark:text-white rounded-lg shadow-lg relative">
@@ -44,9 +44,10 @@ const HomePage = () => {
                     </div>
                 </div>
                 <button
-                    className="absolute left-3 lg:left-24 top-1/2 -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full hover:bg-gray-800 transition"
+                    className="absolute left-3 lg:left-10 top-1/2 -translate-y-1/2 bg-white bg-opacity-50 text-black p-2 rounded-full hover:bg-opacity-100 transition"
                     onClick={handlePrev}>◀</button>
-                <button className="absolute right-3 lg:right-24 top-1/2 -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full hover:bg-gray-800 transition"
+                <button
+                    className="absolute right-3 lg:right-10 top-1/2 -translate-y-1/2 bg-white bg-opacity-50 text-black p-2 rounded-full hover:bg-opacity-100 transition"
                     onClick={handleNext}>▶</button>
             </div>
         </>

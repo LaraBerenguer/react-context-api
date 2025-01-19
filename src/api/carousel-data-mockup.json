@@ -3,18 +3,21 @@
         "id": 1,
         "title": "The episodic directors take you behind the scenes of Star Wars: Skeleton Crew.",
         "buttonText": "Read More",
-        "bgImg": "https://lumiere-a.akamaihd.net/v1/images/skeleton-crew-directed-by-skeleton-crew-mobile_0ecfbe40.jpeg"
+        "bgImg": "https://lumiere-a.akamaihd.net/v1/images/skeleton-crew-directed-by-skeleton-crew-desktop_8f3fed22.jpeg",
+        "bgImgResp": "https://lumiere-a.akamaihd.net/v1/images/skeleton-crew-directed-by-skeleton-crew-mobile_0ecfbe40.jpeg"
     },
     {
         "id": 2,
         "title": "Dive into the practical and digital effects of Star Wars: Skeleton Crew.",
         "buttonText": "Read More",
-        "bgImg": "https://lumiere-a.akamaihd.net/v1/images/vfx-interview-skeleton-crew-mobile_672077ba.jpeg"
+        "bgImg": "https://lumiere-a.akamaihd.net/v1/images/vfx-interview-skeleton-crew-desktop_532ce3e6.jpeg",
+        "bgImgResp": "https://lumiere-a.akamaihd.net/v1/images/vfx-interview-skeleton-crew-mobile_672077ba.jpeg"
     },
     {
         "id": 3,
         "title": "Which Skeleton Crew character would be your BFF? Take the test!",
         "buttonText": "Find Out",
-        "bgImg": "https://lumiere-a.akamaihd.net/v1/images/quiz-bff-skeleton-crew-featured_0d6c2ee1.jpeg"
+        "bgImg": "https://lumiere-a.akamaihd.net/v1/images/quiz-bff-skeleton-crew-hero-desktop_19721546.jpeg",
+        "bgImgResp": "https://lumiere-a.akamaihd.net/v1/images/quiz-bff-skeleton-crew-featured_0d6c2ee1.jpeg"
     }
 ]
