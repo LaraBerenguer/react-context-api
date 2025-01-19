@@ -9,7 +9,7 @@ import Socials from "../Socials";
 const Header =() => {
     return (
         <>
-            <div className="header dark:bg-black flex flex-row justify-between dark:text-white pb-4">
+            <div className="header dark:bg-black flex flex-row justify-between dark:text-white pb-4 px-8">
                 <div className="header-socials content-center m-4">
                     <Socials />                    
                 </div>

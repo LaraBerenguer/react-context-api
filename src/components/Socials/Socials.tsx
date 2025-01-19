@@ -6,7 +6,7 @@ import tw from "../../assets/img/tw.svg"
 
 const Socials = () => {
     return (
-        <div className="flex justify-center gap-2">
+        <div className="flex justify-center gap-2 px-3">
             <img src={fb} alt="Facebook" className="w-4 h-4 cursor-pointer dark:filter dark:invert dark:grayscale" />
             <img src={ig} alt="Instagram" className="w-4 h-4 cursor-pointer dark:filter dark:invert dark:grayscale" />
             <img src={tw} alt="Twitter" className="w-4 h-4 cursor-pointer dark:filter dark:invert dark:grayscale" />
