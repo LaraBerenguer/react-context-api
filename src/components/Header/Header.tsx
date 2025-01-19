@@ -3,7 +3,7 @@
     login: () => void;
 }*/
 
-import { Button } from "../Button/Button";
+import { Link } from "react-router-dom";
 import Socials from "../Socials";
 
 const Header =() => {
@@ -20,7 +20,7 @@ const Header =() => {
                 </div>
                 <div className="header-login content-center m-4">
                     <div className="header-login-container">
-                        <Button label={"Login"} primary={false}/>
+                        <Link to="/signup" className="dark:text-grey-500">LOG IN</Link>
                     </div>
                 </div>
             </div>

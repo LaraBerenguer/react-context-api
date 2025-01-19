@@ -14,6 +14,8 @@ const Layout = () => {
                 return "bg-starships";
             case "/starships/:id":
                 return "bg-details";
+            case "/signup":
+                return "bg-signup";
             default:
                 return "";
         };

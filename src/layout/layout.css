@@ -1,4 +1,4 @@
-.bg-homepage {
+.bg-homepage, .bg-signup {
     background-image: url('/stars-bg.webp');
     background-size: cover;
     background-position: center;
