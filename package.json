@@ -13,6 +13,7 @@
     "watch:css": "npx tailwindcss -i src/styles/input.css -o src/styles/tailwind.css --watch"
   },
   "dependencies": {
+    "firebase": "^11.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.1.1"
