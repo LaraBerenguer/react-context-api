@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useAuth } from './AuthContext';
+import { Link } from 'react-router-dom';
 
 const SignUp: React.FC = () => {
     const emailRef = useRef<HTMLInputElement>(null);
@@ -83,7 +84,7 @@ const SignUp: React.FC = () => {
                     </button>
                 </form>
                 <div className="signup-navigation text-center text-xs">
-                    Already have an account? Log In
+                    Already have an account? <Link className='text-decoration-line: underline' to="/login">Log In</Link>
                 </div>
             </div>
         </div>
