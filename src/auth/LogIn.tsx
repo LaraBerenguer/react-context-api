@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { useAuth } from './AuthContext';
 
-const SignUp: React.FC = () => {
+const LogIn: React.FC = () => {
     const emailRef = useRef<HTMLInputElement>(null);
     const passwordRef = useRef<HTMLInputElement>(null);
     const passwordConfirmRef = useRef<HTMLInputElement>(null);
@@ -90,4 +90,4 @@ const SignUp: React.FC = () => {
     );
 };
 
-export default SignUp;
+export default LogIn;
