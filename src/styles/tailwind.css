@@ -607,6 +607,11 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.mx-3{
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
 .mb-4{
   margin-bottom: 1rem;
 }
@@ -647,6 +652,10 @@ video {
   height: 33.333333%;
 }
 
+.h-10{
+  height: 2.5rem;
+}
+
 .h-20{
   height: 5rem;
 }
@@ -673,6 +682,10 @@ video {
 
 .min-h-screen{
   min-height: 100vh;
+}
+
+.w-10{
+  width: 2.5rem;
 }
 
 .w-5{

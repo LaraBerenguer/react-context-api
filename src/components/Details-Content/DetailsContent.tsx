@@ -1,5 +1,7 @@
 import { useDetails } from "../../context/DetailsContext";
+import { FilmsProvider } from "../../context/FilmsContext";
 import { PilotsProvider } from "../../context/PilotsContext";
+import Films from "../Films";
 import Pilots from "../Pilots";
 import Starship from "../Starship";
 
@@ -12,8 +14,10 @@ const DetailsContent: React.FC = () => {
     if (error) return <div>No data</div>
 
     const pilotIds: string[] = detailsData.pilots.map(detail => (detail.split('/')[5]));
+    const fimlIds: string[] = detailsData.films.map(detail => (detail.split('/')[5]));
     console.log("details data: ", detailsData);
     console.log("pilotIds: ", pilotIds);
+    console.log("fimlIds: ", fimlIds);
 
     return (
         <>
@@ -26,16 +30,17 @@ const DetailsContent: React.FC = () => {
                 <PilotsProvider pilotIds={pilotIds}>
                     <div className="pilots-container">
                         <div className="pilots-container-component">
-                            <Pilots />                                
+                            <Pilots />
                         </div>
                     </div>
                 </PilotsProvider>
-
-                <div className="films-container">
-                    <div className="films-container-component">
-                        {/*<Films data={detailsData.films} />*/}
+                <FilmsProvider fimlIds={fimlIds}>
+                    <div className="films-container">
+                        <div className="films-container-component">
+                            {<Films />}
+                        </div>
                     </div>
-                </div>
+                </FilmsProvider>
             </div >
         </>
     )

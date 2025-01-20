@@ -22,7 +22,7 @@ export const PilotsProvider: React.FC<{ pilotIds: string[], children: React.Reac
             try {
                 setpilotsLoading(true);
                 const data = await Promise.all(pilotIds.map((id) => fetchPilots(id)));
-                console.log("PilotsProvider data: ", data); // Add this line
+                console.log("PilotsProvider data: ", data);
                 setPilotsData(data);
             } catch (err) {
                 setpilotsError("Error fetching Pilots");

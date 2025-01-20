@@ -16,7 +16,7 @@ const Pilots: React.FC = () => {
                 <div className="pilots-title-div my-4 py-2 px-4 border-t border-b border-gray-600">
                     <div className="pilots-title">PILOTS</div>
                 </div>
-                {!pilotsData || pilotsData.length === 0 && <div className="dark:text-white me-6 ms-6">This ship has no pilots</div>}
+                {!pilotsData || pilotsData.length === 0 && <div className="dark:text-white me-6 ms-6">No official pilot assigned... This ship's a drifter in the galaxy!</div>}
                 {pilotsData &&
                     <div className="pilots-map flex flex-row justify-start gap-4 ms-4">
                         {pilotsData.map(pilot => (
