@@ -1,14 +1,9 @@
-/*interface HeaderProps {
-    onClick?: () => void;
-    login: () => void;
-}*/
-import { useAuth } from "../../auth/AuthContext";
-
-import { Link } from "react-router-dom";
+import AuthMenu from "../../auth/AuthMenu";
 import Socials from "../Socials";
 
-const Header = () => {
-    const {currentUser} = useAuth();
+
+const Header = () => {    
+
     return (
         <div className="header dark:bg-black flex flex-row justify-center dark:text-white pb-4 px-8">
             <div className="header-container flex w-full">
@@ -21,12 +16,9 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="header-login content-center m-4 basis-1/4 flex justify-end items-center">
-                    <div className="header-login-container">
-                        {currentUser? <Link to="/login" className="dark:text-grey-500">LOG OUT</Link> : <Link to="/login" className="dark:text-grey-500">LOG IN</Link>} 
-                    </div>
+                    <AuthMenu />
                 </div>
-            </div>
-
+            </div>            
         </div>
     )
 };
