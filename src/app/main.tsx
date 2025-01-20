@@ -8,7 +8,7 @@ import { AuthProvider } from '../auth/AuthContext.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ShipsProvider>ºº
+    <ShipsProvider>
       <AuthProvider>
         <AppRoutes />
       </AuthProvider>
