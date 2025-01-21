@@ -8,7 +8,7 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({ direction, onClick 
 
     return (
         <button
-            className={`absolute ${direction === "left" ? "left-3 lg:left-5" : "right-3 lg:right-5"} top-1/2 -translate-y-1/2 transition ease-in-out delay-150 hover:scale-110 duration-300`}
+            className={`absolute ${direction === "left" ? "left-3 lg:left-3" : "right-3 lg:right-3"} bg-opacity-50 hover:bg-opacity-100 top-1/2 -translate-y-1/2 transition ease-in-out delay-150 hover:scale-110 duration-300`}
             onClick={onClick}
         >
             <svg
