@@ -51,7 +51,7 @@ const StarshipsPage = () => {
     }, []);
 
     return (
-        <div>
+        <div className='starships-page pb-10'>
             <div className='starships-page-container flex justify-center'>
                 <div className='starships-page-list flex flex-col gap-3'>
                     {ships.map((ship) => <ShipCard key={ship.id} shipData={ship} />)}

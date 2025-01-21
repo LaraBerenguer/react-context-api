@@ -24,11 +24,11 @@ const Starship: React.FC<StarshipProps> = ({ data }) => {
             <div className="starship-card-div flex flex-row justify-center">
                 <div className="flex flex-row">
                     <div className="starship-card-img-div basis-1/2 flex justify-end items-center">
-                        <div className="starship-img w-full max-w-lg aspect-auto overflow-hidden rounded-md">
+                        <div className="starship-img w-full max-w-lg aspect-auto overflow-hidden rounded-l-md">
                             <img src={`https://starwars-visualguide.com/assets/img/starships/${data.id}.jpg`} alt={`${data.name}`} className="w-full h-full object-cover" />
                         </div>
                     </div>
-                    <div className="starship-card-details-div dark:bg-gray-600 dark:bg-opacity-80 basis-1/2 p-7 rounded-md border-l-4 border-red-400">
+                    <div className="starship-card-details-div dark:bg-gray-600 dark:bg-opacity-80 basis-1/2 p-7 rounded-r-md border-l-2 border-red-500">
                         <div className="card-details flex flex-col justify-between h-full">
                             <div className="card-details-title font-extrabold">
                                 <p>{(data.name).toUpperCase()}</p>

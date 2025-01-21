@@ -22,7 +22,7 @@ const Pilots: React.FC = () => {
                         {pilotsData.map(pilot => (
                             <div className="pilots-card-div flex flex-col items-center w-1/8 hover:transition ease-in-out delay-150 hover:scale-105 duration-300">
                                 <div className="pilots-card-img-div w-full">
-                                    <div className="pilots-img overflow-hidden rounded-md shadow-lg w-full">
+                                    <div className="pilots-img overflow-hidden rounded-t-md shadow-lg w-full">
                                         <img
                                             src={`https://starwars-visualguide.com/assets/img/characters/${pilot.id}.jpg`}
                                             alt={`${pilot.name}`}
@@ -30,7 +30,7 @@ const Pilots: React.FC = () => {
                                         />
                                     </div>
                                 </div>
-                                <div className="pilots-card-details-div dark:bg-gray-600 p-4 rounded-md w-full">
+                                <div className="pilots-card-details-div border-t-2 border-red-500 dark:bg-gray-600 p-4 rounded-b-md w-full">
                                     <div className="pilot-details">
                                         <div className="pilot-name mb-2 font-bold text-center">
                                             <p>{pilot.name}</p>

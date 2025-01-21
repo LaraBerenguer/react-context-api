@@ -22,7 +22,7 @@ const Films: React.FC = () => {
                         {filmsData.map(film => (
                             <div className="films-card-div flex flex-col items-center w-1/8 hover:transition ease-in-out delay-150 hover:scale-105 duration-300">
                                 <div className="films-card-img-div w-full">
-                                    <div className="films-img overflow-hidden rounded-md shadow-lg w-full">
+                                    <div className="films-img overflow-hidden rounded-t-md shadow-lg w-full">
                                         <img                                            
                                             src={`https://starwars-visualguide.com/assets/img/films/${film.id}.jpg`}
                                             alt={`${film.title}`}
@@ -30,7 +30,7 @@ const Films: React.FC = () => {
                                         />
                                     </div>
                                 </div>
-                                <div className="films-card-details-div dark:bg-gray-600 p-4 rounded-md w-full">
+                                <div className="films-card-details-div border-t-2 border-red-500 dark:bg-gray-600 p-4 rounded-b-md w-full">
                                     <div className="film-details">
                                         <div className="film-title mb-2 font-bold text-center">
                                             <p>{film.title}</p>
