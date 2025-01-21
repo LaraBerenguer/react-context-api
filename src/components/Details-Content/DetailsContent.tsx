@@ -1,6 +1,7 @@
 import { useDetails } from "../../context/DetailsContext";
 import { FilmsProvider } from "../../context/FilmsContext";
 import { PilotsProvider } from "../../context/PilotsContext";
+import "./DetailsContent.css";
 import Films from "../Films";
 import Pilots from "../Pilots";
 import Starship from "../Starship";

@@ -13,7 +13,7 @@ const Starship: React.FC<StarshipProps> = ({ data }) => {
 
     const navigate = useNavigate();
     const handleClick = () => {
-        navigate(`/starships/`)
+        navigate(`/starships`)
     };
     
     return (

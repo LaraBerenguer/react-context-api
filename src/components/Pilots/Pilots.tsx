@@ -20,7 +20,7 @@ const Pilots: React.FC = () => {
                 {pilotsData &&
                     <div className="pilots-map flex flex-row justify-start gap-4 ms-4">
                         {pilotsData.map(pilot => (
-                            <div className="pilots-card-div flex flex-col items-center w-1/8">
+                            <div className="pilots-card-div flex flex-col items-center w-1/8 hover:transition ease-in-out delay-150 hover:scale-105 duration-300">
                                 <div className="pilots-card-img-div w-full">
                                     <div className="pilots-img overflow-hidden rounded-md shadow-lg w-full">
                                         <img
@@ -32,7 +32,7 @@ const Pilots: React.FC = () => {
                                 </div>
                                 <div className="pilots-card-details-div dark:bg-gray-600 p-4 rounded-md w-full">
                                     <div className="pilot-details">
-                                        <div className="pilot-name mb-4 font-bold text-center">
+                                        <div className="pilot-name mb-2 font-bold text-center">
                                             <p>{pilot.name}</p>
                                         </div>
                                     </div>

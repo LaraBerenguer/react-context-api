@@ -20,7 +20,7 @@ const Films: React.FC = () => {
                 {filmsData &&
                     <div className="films-map flex flex-row justify-start gap-4 ms-4">
                         {filmsData.map(film => (
-                            <div className="films-card-div flex flex-col items-center w-1/8">
+                            <div className="films-card-div flex flex-col items-center w-1/8 hover:transition ease-in-out delay-150 hover:scale-105 duration-300">
                                 <div className="films-card-img-div w-full">
                                     <div className="films-img overflow-hidden rounded-md shadow-lg w-full">
                                         <img                                            
@@ -32,10 +32,10 @@ const Films: React.FC = () => {
                                 </div>
                                 <div className="films-card-details-div dark:bg-gray-600 p-4 rounded-md w-full">
                                     <div className="film-details">
-                                        <div className="film-title mb-4 font-bold text-center">
+                                        <div className="film-title mb-2 font-bold text-center">
                                             <p>{film.title}</p>
                                         </div>
-                                        <div className="film-episode mb-4 text-xs text-center">
+                                        <div className="film-episode mb-2 text-xs text-center">
                                             <p>Episode {film.episode_id}</p>
                                         </div>
                                     </div>

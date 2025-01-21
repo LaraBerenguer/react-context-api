@@ -32,7 +32,7 @@ const SignUp: React.FC = () => {
     };
 
     return (
-        <div className="signup-page flex items-center justify-center min-h-screen px-3">
+        <div className="signup-page flex items-center justify-center min-h-[70vh] px-3">
             <div className="signup-container w-full max-w-md p-8 space-y-6 bg-white rounded-2xl shadow-md">
                 <h2 className="text-2xl font-bold text-center">Sign Up</h2>
                 {error &&

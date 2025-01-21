@@ -16,6 +16,8 @@ const Layout = () => {
                 return "bg-details";
             case "/signup":
                 return "bg-signup";
+            case "/login":
+                return "bg-login";
             default:
                 return "";
         };

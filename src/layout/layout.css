@@ -1,10 +1,10 @@
-.bg-homepage, .bg-signup {
+.bg-homepage, .bg-details, .bg-signup, .bg-login {
     background-image: url('/stars-bg.webp');
     background-size: cover;
     background-position: center;
 }
 
-.bg-starships, .bg-details {
+.bg-starships {
     background-image: url('/bg.webp');
     background-size: cover;
     background-position: center;
