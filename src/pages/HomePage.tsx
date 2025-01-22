@@ -16,7 +16,7 @@ const HomePage = () => {
                 <Carousel />
             </div>
             <div className="homepage-button flex justify-center p-10">
-                <Button label={"GO TO STARSHIPS"} size={"large"} primary={true} backgroundColor={"#ffe91f"} color={"##000"} onClick={handleClick} />
+                <Button label={"Go to Starships"} size={"large"} primary={true} onClick={handleClick} />
             </div>
         </div>
     )

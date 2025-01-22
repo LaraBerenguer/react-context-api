@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className="footer py-10 dark:bg-black">
             <div className="footer-text text-xs dark:text-white text-center m-4">
-                <p>More from Star Wars:</p>
+                <p>More from <a href="https://www.starwars.com/" target="_blank">Star Wars</a>:</p>
             </div>
             <div className="footer-socials">
                 <Socials />

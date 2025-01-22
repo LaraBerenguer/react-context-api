@@ -41,9 +41,7 @@ const Carousel = () => {
                                     <div className="mt-4">
                                         <Button
                                             label={item.buttonText}
-                                            primary={true}
-                                            backgroundColor={"#ffe91f"}
-                                            color={"#000"}
+                                            primary={true}                                            
                                         />
                                     </div>
                                 </div>

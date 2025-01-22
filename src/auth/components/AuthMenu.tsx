@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { useAuth } from "./AuthContext";
-import person from "../../public/person.svg";
+import { useAuth } from "../AuthContext";
+import person from '../../assets/img/person.svg';
 
 const AuthMenu = () => {
     const { currentUser } = useAuth();
@@ -23,7 +23,7 @@ const AuthMenu = () => {
         <div className="header-login-container p-4">
             <div className="flex flex-col sm:flex-row items-center">
                 <div className="mb-2 sm:mb-0">
-                    <img src={person} alt="Person" className="w-5 h-5 mx-3 dark:filter dark:invert dark:grayscale" />
+                    <img src={person} alt="Login and Logout" className="w-5 h-5 mx-3 dark:filter dark:invert dark:grayscale" />
                 </div>
                 {currentUser ? (<Link to="/login" className="dark:text-white" onClick={handleLogout}>LOG OUT</Link>)
                     : (<Link to="/login" className="dark:text-white">LOG IN</Link>)}

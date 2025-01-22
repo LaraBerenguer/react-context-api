@@ -3,8 +3,8 @@ import Starships from '../pages/StarshipsPage';
 import Layout from "../layout/layout";
 import HomePage from "../pages/HomePage";
 import DetailsPage from "../pages/DetailsPage";
-import SignUp from "../auth/SignUp";
-import LogIn from "../auth/LogIn";
+import SignUp from "../auth/components/SignUp";
+import LogIn from "../auth/components/LogIn";
 import PrivateRoute from "../auth/PrivateRoute";
 
 const AppRoutes = () => {

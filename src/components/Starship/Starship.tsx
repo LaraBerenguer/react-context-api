@@ -57,7 +57,7 @@ const Starship: React.FC<StarshipProps> = ({ data }) => {
                                 </div>
                             </div>
                             <div className="button-container">
-                                <Button label={"Back"} primary={true} backgroundColor={"#ffe91f"} color={"##000"} onClick={handleClick}/>
+                                <Button label={"Back"} primary={true} onClick={handleClick}/>
                             </div>                            
                         </div>
                     </div>

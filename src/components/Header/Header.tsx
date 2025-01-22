@@ -1,4 +1,4 @@
-import AuthMenu from "../../auth/AuthMenu";
+import AuthMenu from "../../auth/components/AuthMenu";
 import Socials from "../Socials";
 
 

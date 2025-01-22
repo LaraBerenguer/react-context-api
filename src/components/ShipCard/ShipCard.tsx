@@ -19,7 +19,7 @@ const ShipCard: React.FC<ShipCardProps> = ({shipData}) => {
 
     return (
         <button onClick={handleClick}>
-            <div className="card dark:bg-gray-900 rounded-md p-4 flex flex-col max-w-lg">
+                <div className="card dark:bg-gray-900 rounded-md p-4 flex flex-col max-w-lg dark:hover:ring-2 dark:hover:ring-yellow-500 transition duration-300 ease-in-out">
                 <div className="card-text dark:text-white">
                     <div className="card-text-name font-semibold">
                         <p>{shipData.name}</p>

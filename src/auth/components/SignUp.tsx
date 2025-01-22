@@ -1,13 +1,15 @@
 import React, { useRef, useState } from 'react';
-import { useAuth } from './AuthContext';
+import { useAuth } from '../AuthContext';
 import { Link } from 'react-router-dom';
+import '../auth.css';
+import Logo from './Logo';
 
 const SignUp: React.FC = () => {
     const emailRef = useRef<HTMLInputElement>(null);
     const passwordRef = useRef<HTMLInputElement>(null);
     const passwordConfirmRef = useRef<HTMLInputElement>(null);
     const { signUp } = useAuth();
-    
+
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
 
@@ -33,12 +35,18 @@ const SignUp: React.FC = () => {
 
     return (
         <div className="signup-page flex items-center justify-center min-h-[70vh] px-3">
-            <div className="signup-container w-full max-w-md p-8 space-y-6 bg-white rounded-2xl shadow-md">
-                <h2 className="text-2xl font-bold text-center">Sign Up</h2>
+            <div className="signup-container w-full max-w-md p-10 space-y-8 bg-white rounded-2xl shadow-md">
+                <div className="signup-page-logo">
+                    <Logo />
+                </div>
+                <div className='signup-page-h2 flex flex-col gap-3'>
+                    <h2 className="text-2xl font-bold">Sign Up</h2>
+                    <p>Sign Up to Star Wars and join the MyDisney family.</p>
+                </div>
                 {error &&
                     <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
                         <strong className="font-bold">Oh no! </strong>
-                        <span className="block sm:inline">{error}</span>                        
+                        <span className="block sm:inline">{error}</span>
                     </div>
                 }
                 <form onSubmit={handleSignUp} className="space-y-4">
@@ -78,7 +86,7 @@ const SignUp: React.FC = () => {
                     <button
                         type="submit"
                         disabled={loading}
-                        className="w-full px-4 py-2 font-medium text-black bg-yellow-400 rounded-md hover:bg-yellow-500 focus:outline-none focus:ring focus:ring-yellow-300"
+                        className="w-full px-4 py-2 font-medium text-black bg-yellow-400 rounded-3xl hover:bg-yellow-500 focus:outline-none focus:ring focus:ring-yellow-300"
                     >
                         Sign Up
                     </button>
