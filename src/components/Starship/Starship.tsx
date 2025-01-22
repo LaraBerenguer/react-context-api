@@ -8,7 +8,6 @@ interface StarshipProps {
     onClick?: () => void;
 };
 
-
 const Starship: React.FC<StarshipProps> = ({ data }) => {
 
     const navigate = useNavigate();

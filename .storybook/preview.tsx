@@ -1,7 +1,9 @@
 import type { Preview } from '@storybook/react';
 import '../src/styles/tailwind.css';
-
 import { withThemeByClassName } from '@storybook/addon-themes';
+import { AuthProvider } from '../src/auth/AuthContext';
+import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
 
 const preview: Preview = {
   parameters: {
@@ -20,6 +22,13 @@ const preview: Preview = {
       },
       defaultTheme: 'light',
     }),
+    (Story) => (
+      <MemoryRouter>
+        <AuthProvider>
+          <Story />
+        </AuthProvider>
+      </MemoryRouter>
+    ),
   ],
 };
 
