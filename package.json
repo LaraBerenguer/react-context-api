@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "watch:css": "npx tailwindcss -i src/styles/input.css -o src/styles/tailwind.css --watch"
+    "watch:css": "npx tailwindcss -i src/styles/input.css -o src/styles/tailwind.css --watch",
+    "start:all": "start npm run dev && start npm run storybook && start npm run watch:css"
   },
   "dependencies": {
     "firebase": "^11.2.0",
