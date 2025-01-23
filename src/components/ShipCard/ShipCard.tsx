@@ -12,6 +12,8 @@ interface ShipCardProps {
 
 const ShipCard: React.FC<ShipCardProps> = ({shipData}) => {
 
+    if(!shipData || Object.keys(shipData).length === 0) return <p>No ship available</p>
+
     const navigate = useNavigate();
     const handleClick = () => {
         navigate(`/starships/${shipData.id}`)

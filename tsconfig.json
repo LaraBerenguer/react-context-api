@@ -7,5 +7,10 @@
   "compilerOptions": {
     "resolveJsonModule": true,
     "esModuleInterop": true,
-  }
+    "types": ["vitest/globals", "@testing-library/jest-dom"]
+  },
+  "include": [
+    "./vitest.setup.ts",
+    "./jest-setup.ts"
+  ],
 }
