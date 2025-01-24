@@ -4,8 +4,6 @@
 
 Welcome! This is a simple Star Wars Wikia built with React + Vite. The app includes state management using Context API, user authentication with Firebase and components made with Storybook. The page is based on the official Star Wars site. Hope you like it.
 
-![Star Wars Api Context](src/assets/img/sw.png)
-
 ## 💻 Technologies Used
 
 - React
@@ -22,11 +20,29 @@ Welcome! This is a simple Star Wars Wikia built with React + Vite. The app inclu
 - [x] Reusable components
 - [x] Context API for state management
 - [x] Pages
-- [x] URL parameters
 - [x] Client info form
 - [x] Routes and pages
 - [x] User authentication
 - [ ] Unit testing
+
+## 🔑 Setting up .env configuration
+
+To run this project, you need to configure environment variables. Follow these steps:
+
+1. Copy the `.env.example` file and rename it to `.env`:
+
+```bash
+cp .env.example .env
+```
+
+2. Open the .env file and replace your_api_key and others with your own API key from Firebase. You can create a free auth project here: [Firebase](https://firebase.google.com/)
+
+```bash
+VITE_API_KEY:your_api_key
+VITE_AUTH_DOMAIN:your_auth_domain_key
+...
+```
+3. After setting up the .env file, you’ll be ready to run the project.
 
 ## 📋 Requirements
 
@@ -69,6 +85,15 @@ npm run storybook
 ```bash
 npm run watch:css
 ```
+
+## ℹ️​ Optional step
+
+If you use Windows, you can run this script to run the project:
+
+```bash
+npm run start:all
+```
+It will run vite, storybook and compilation scripts at the same time.
 
 ## 🤝 Contributions
 If you want to contribute or report issues, feel free to create an issue or submit a pull request.
