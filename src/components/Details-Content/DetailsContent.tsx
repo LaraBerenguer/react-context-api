@@ -16,9 +16,6 @@ const DetailsContent: React.FC = () => {
 
     const pilotIds: string[] = detailsData.pilots.map(detail => (detail.split('/')[5]));
     const fimlIds: string[] = detailsData.films.map(detail => (detail.split('/')[5]));
-    console.log("details data: ", detailsData);
-    console.log("pilotIds: ", pilotIds);
-    console.log("fimlIds: ", fimlIds);
 
     return (
         <>

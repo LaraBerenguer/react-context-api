@@ -9,8 +9,6 @@ export const fetchDetails = async (id: number) => {
         id: (data.url.split('/')[5])
     };
 
-    console.log("dataById: ", DetailsData);
-
     return DetailsData;
 };
 

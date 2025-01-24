@@ -5,7 +5,6 @@ import { useFilms } from "../../context/FilmsContext";
 const Films: React.FC = () => {
 
     const { filmsData, filmsLoading, filmsError } = useFilms();
-    console.log("Films component data: ", filmsData);
 
     if (filmsLoading) return <div>Loading...</div>
     if (filmsError) return <div>Error loading films</div>

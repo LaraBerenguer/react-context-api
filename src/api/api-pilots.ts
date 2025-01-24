@@ -6,7 +6,6 @@ const apiPilots = async (id: string) => {
     }
 
     const data = await response.json();
-    console.log("apiPilots data: ", data);
     return data;    
 }
 

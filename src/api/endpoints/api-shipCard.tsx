@@ -11,8 +11,6 @@ export const fetchShipCard = async () => {
         model: ship.model
     }));
 
-    console.log("shipCardData: ", shipCardData);
-
     return shipCardData;
 };
 

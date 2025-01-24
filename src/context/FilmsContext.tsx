@@ -16,13 +16,11 @@ export const FilmsProvider: React.FC<{ fimlIds: string[], children: React.ReactN
     const [filmsLoading, setFilmsLoading] = useState(true);
     const [filmsError, setFilmsError] = useState<string | null>(null);
 
-    useEffect(() => {
-        console.log("Films IDs: ", fimlIds);
+    useEffect(() => {        
         const fetchData = async () => {
             try {
                 setFilmsLoading(true);
                 const data = await Promise.all(fimlIds.map((id) => fetchFilms(id)));
-                console.log("FilmsProvider data: ", data);
                 setFilmsData(data);
             } catch (err) {
                 setFilmsError("Error fetching Films");

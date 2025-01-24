@@ -17,12 +17,10 @@ export const PilotsProvider: React.FC<{ pilotIds: string[], children: React.Reac
     const [pilotsError, setpilotsError] = useState<string | null>(null);
 
     useEffect(() => {
-        console.log("Pilot IDs: ", pilotIds);
         const fetchData = async () => {
             try {
                 setpilotsLoading(true);
                 const data = await Promise.all(pilotIds.map((id) => fetchPilots(id)));
-                console.log("PilotsProvider data: ", data);
                 setPilotsData(data);
             } catch (err) {
                 setpilotsError("Error fetching Pilots");

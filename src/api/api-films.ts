@@ -6,7 +6,6 @@ const apiFilms = async (id: string) => {
     }
 
     const data = await response.json();
-    console.log("apiFilms data: ", data);
     return data;    
 }
 

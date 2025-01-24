@@ -9,7 +9,5 @@ export const fetchPilots = async (id: string) => {
         id: (data.url.split('/')[5])
     };
 
-    console.log("fetchPilots data: ", PilotsData);
-
     return PilotsData;
 };
