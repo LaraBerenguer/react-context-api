@@ -5,7 +5,6 @@ import { usePilots } from "../../context/PilotsContext";
 const Pilots: React.FC = () => {
 
     const { pilotsData, pilotsLoading, pilotsError } = usePilots();
-    ("Pilots component data: ", pilotsData);
 
     if (pilotsLoading) return <div>Loading...</div>
     if (pilotsError) return <div>Error loading pilots</div>
