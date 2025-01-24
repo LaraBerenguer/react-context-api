@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useAuth } from '../AuthContext';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../auth.css';
 import Logo from './Logo';
 
@@ -9,6 +9,7 @@ const SignUp: React.FC = () => {
     const passwordRef = useRef<HTMLInputElement>(null);
     const passwordConfirmRef = useRef<HTMLInputElement>(null);
     const { signUp } = useAuth();
+    const navigate = useNavigate()
 
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
@@ -26,6 +27,7 @@ const SignUp: React.FC = () => {
                 setError("")
                 setLoading(true)
                 await signUp(emailRef.current.value, passwordRef.current.value);
+                navigate("/login");
             } catch {
                 setError("Failed to create an account.")
             }
