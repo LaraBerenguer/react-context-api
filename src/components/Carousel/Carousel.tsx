@@ -14,6 +14,10 @@ const Carousel = () => {
         setCurrentIndex((prevIndex) => (prevIndex === carouselData.length - 1 ? 0 : prevIndex + 1));
     };
 
+    const handleClick = () => {
+        window.open("https://www.starwars.com/", "_blank");
+    };
+
     return (
         <div className="homepage relative w-full max-w-full mx-auto">
             <div className="homepage-container relative h-[600px] overflow-hidden rounded-lg">
@@ -41,7 +45,8 @@ const Carousel = () => {
                                     <div className="mt-4">
                                         <Button
                                             label={item.buttonText}
-                                            primary={true}                                            
+                                            primary={true}
+                                            onClick={handleClick}
                                         />
                                     </div>
                                 </div>
