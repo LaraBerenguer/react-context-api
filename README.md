@@ -1,8 +1,8 @@
-# React Context API Example
+# React Context API (Star Wars wikia with API)
 
 ## 📄 Description
 
-Welcome! This is a simple Star Wars Wikia built with React + Vite. The app includes state management using Context API, user authentication with Firebase and components made with Storybook. The page is based on the official Star Wars site. Hope you like it.
+Welcome! This is a Star Wars Wikia built with React + Vite. The app includes state management using Context API, user authentication with Firebase and components made with Storybook. The page is based on the official Star Wars site. Hope you like it.
 
 ## 💻 Technologies Used
 
