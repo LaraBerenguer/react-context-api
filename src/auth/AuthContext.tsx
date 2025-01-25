@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { getAuth, createUserWithEmailAndPassword, UserCredential, User, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, UserCredential, User, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
 import app from "./credentials/credentials";
 
 interface AuthContext {
@@ -14,6 +14,7 @@ const AuthContext = createContext<AuthContext | undefined>(undefined);
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
     const [currentUser, setCurrentUser] = useState<null | any>(null);
+    const [loading, setLoading] = useState(true);
 
     const auth = getAuth(app);
 
@@ -30,12 +31,13 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     };
 
     useEffect(() => {
-        const unsubscribe = auth.onAuthStateChanged(user => {
-            setCurrentUser(user)
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            setCurrentUser(user);
+            setLoading(false);
         });
 
-        return unsubscribe
-    }, []);
+        return unsubscribe;
+    }, [auth]);
 
     const value = {
         currentUser,
@@ -44,6 +46,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         logOut
     }
 
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+    
     return (
         <AuthContext.Provider value={value}>
             {children}

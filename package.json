@@ -13,9 +13,7 @@
     "watch:css": "npx tailwindcss -i src/styles/input.css -o src/styles/tailwind.css --watch",
     "start:all": "start npm run dev && start npm run storybook && start npm run watch:css",
     "test": "vitest",
-    "test:ui": "vitest --ui",
-    "build2": "tsc -b && rm -r _static 2>/dev/null; node sammy.js; vite build",
-    "start": "node sammy.js; serve -s _static -l tcp://0.0.0.0:$PORT -n"
+    "test:ui": "vitest --ui"
   },
   "dependencies": {
     "firebase": "^11.2.0",
