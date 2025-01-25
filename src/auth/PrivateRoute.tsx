@@ -11,6 +11,7 @@ const PrivateRoute: React.FC<PrivateRouteProps> = ({ children }) => {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(true);
     console.log("Out use effect: " + JSON.stringify(currentUser));
+    
     useEffect(() => {
         console.log("In use effect: " + JSON.stringify(currentUser));
         if (currentUser === undefined) {

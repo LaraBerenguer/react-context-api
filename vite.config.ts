@@ -18,9 +18,10 @@ export default defineConfig({
   },
   server: {
     host: "0.0.0.0",
-    port: 8080
+    port: 80
   },  
   build: {
-    outDir: path.join(__dirname, "_static")
-  }
+    outDir: path.join(__dirname, "dist")
+  },
+  base: "/",
 });
