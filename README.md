@@ -25,6 +25,7 @@ Check it live at: [https://starwars-bootcamp-5omdo.ondigitalocean.app/](https://
 - [x] Client info form
 - [x] Routes and pages
 - [x] User authentication
+- [ ] Placeholder for images not working
 - [ ] Unit testing
 
 ## 🔑 Setting up .env configuration
